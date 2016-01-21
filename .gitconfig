@@ -1,0 +1,5 @@
+[user]
+	name = Scott Morley
+	email = scott.morley@insidesales.com
+[branch]
+	autosetupmerge = true
