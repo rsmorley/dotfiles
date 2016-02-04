@@ -3,21 +3,32 @@ Plug 'junegunn/seoul256.vim'
 Plug 'tpope/vim-sensible'
 Plug 'Valloric/YouCompleteMe'
 "Plug 'marijnh/tern_for_vim'
-Plug 'wookiehangover/jshint.vim', { 'for': 'javascript' }
-Plug 'heavenshell/vim-jsdoc', { 'for': 'javascript' }
-Plug 'altercation/vim-colors-solarized'
+Plug 'Shutnik/jshint2.vim'
+"Plug 'wookiehangover/jshint.vim', { 'for': 'javascript' }
+"Plug 'heavenshell/vim-jsdoc', { 'for': 'javascript' }
 call plug#end()
 
-"jshint check on wrtie only
-"let JSHintUpdateWriteOnly=1
+"jshint2 check on write
+let jshint2_save=1
+
+" jshint validation
+nnoremap <silent><F10> :JSHint<CR>
+inoremap <silent><F10> <C-O>:JSHint<CR>
+vnoremap <silent><F10> :JSHint<CR>
+
+" show next jshint error
+nnoremap <silent><F11> :lnext<CR>
+inoremap <silent><F11> <C-O>:lnext<CR>
+vnoremap <silent><F11> :lnext<CR>
+
+" show previous jshint error
+nnoremap <silent><F12> :lprevious<CR>
+inoremap <silent><F12> <C-O>:lprevious<CR>
+vnoremap <silent><F12> :lprevious<CR>
 
 "seoul color scheme
 let g:seoul256_background = 233
 colo seoul256
-
-"solarized color scheme
-"set background=dark
-"colorscheme solarized
 
 set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 autocmd FileType javascript,json setlocal shiftwidth=2 tabstop=2

@@ -3,3 +3,6 @@
 	email = scott.morley@insidesales.com
 [branch]
 	autosetupmerge = true
+[alias]
+	cd = checkout develop
+	po = push origin
