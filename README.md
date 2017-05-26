@@ -28,3 +28,6 @@ Do print avaialble term colors and their names in Terminal:
 for i in {0..255} ; do
     printf "\x1b[38;5;${i}mcolour${i}\n"
 done
+
+tmux conf cloned from https://github.com/gpakosz/.tmux.git
+
