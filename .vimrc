@@ -1,9 +1,12 @@
 call plug#begin('~/.vim/plugged')
+"Plug 'fatih/molokai'
 Plug 'junegunn/seoul256.vim'
 Plug 'tpope/vim-sensible'
 Plug 'Valloric/YouCompleteMe'
-"Plug 'marijnh/tern_for_vim'
 Plug 'Shutnik/jshint2.vim'
+Plug 'fatih/vim-go'
+Plug 'scrooloose/nerdtree'
+"Plug 'marijnh/tern_for_vim'
 "Plug 'wookiehangover/jshint.vim', { 'for': 'javascript' }
 "Plug 'heavenshell/vim-jsdoc', { 'for': 'javascript' }
 call plug#end()
@@ -29,9 +32,10 @@ vnoremap <silent><F12> :lprevious<CR>
 "seoul color scheme
 let g:seoul256_background = 233
 colo seoul256
+"colo molokai
 
 set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
-autocmd FileType javascript,json setlocal shiftwidth=2 tabstop=2
+autocmd FileType javascript,json,yaml,scss,jsx,html setlocal shiftwidth=2 tabstop=2
 
 "show line numbers
 set number
@@ -39,5 +43,11 @@ set number
 "auto remove whitespace
 autocmd FileType json,javascript autocmd BufWritePre <buffer> :%s/\s\+$//e
 
+inoremap jj <ESC>
+
+"this is freezing :(
+"let g:go_fmt_command = "goimports"
+
+"set clipboard=unnamedplus
 "set list
 "set listchars=eol:¬,tab:▸\

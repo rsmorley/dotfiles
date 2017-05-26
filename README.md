@@ -23,3 +23,8 @@ open vim and run
 from Terminal,
 cd ~/.vim/plugged/YouCompleteMe
 ./install.py --clang-completer --gocode-completer --tern-completer
+
+Do print avaialble term colors and their names in Terminal:
+for i in {0..255} ; do
+    printf "\x1b[38;5;${i}mcolour${i}\n"
+done
