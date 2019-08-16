@@ -1,6 +1,6 @@
 [user]
 	name = Scott Morley
-	email = scott.morley@insidesales.com
+	email = morley.rs@gmail.com
 [branch]
 	autosetupmerge = true
 [alias]
@@ -8,9 +8,10 @@
 	po = push origin
 [core]
 	excludesfile = /Users/scott.morley/.gitignore_global
+	editor = vim
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+    trustExitCode = true

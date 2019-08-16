@@ -57,8 +57,6 @@ plugins=(git)
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/usr/local/munki"
 
 # Go stuff
-export GOPATH="/Users/scott.morley/Code/Go"
-export PATH=$PATH:$GOPATH/bin
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -88,15 +86,13 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias cbq="/Applications/Couchbase\ Server.app/Contents/Resources/couchbase-core/bin/cbq"
-alias cbq-us1a-taskman="cbq -engine='http://ec2-52-205-215-46.compute-1.amazonaws.com:8093' -u playbooks -p GapnQosoYaze4."
-alias cbq-us1a-playbooks="cbq -engine='http://ec2-52-45-74-73.compute-1.amazonaws.com:8093' -u playbooks -p GapnQosoYaze4."
-alias cbq-eu1="cbq -engine='http://ec2-52-213-176-154.eu-west-1.compute.amazonaws.com:8093' -u playbooks -p GapnQosoYaze4."
 
-alias cbq-staging="cbq -engine='http://ec2-54-173-39-254.compute-1.amazonaws.com:8093' -u playbooks -p GapnQosoYaze4."
+source ~/.dotfiles/.aliases
 
 source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 
 
 # my customizations
 eval $(thefuck --alias)
 export EDITOR=vim
+
+alias debugc="gdb --batch --ex run --ex bt --ex q --args"
